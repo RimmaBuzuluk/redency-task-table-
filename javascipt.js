@@ -35,11 +35,11 @@ tbody.appendChild(tr);
 const generateElem = (name, created, categor, contest, dates) => {
   return `
     <tr class="new_table">
-        <th>${name}</th>
-        <th>${created}</th>
-        <th>${categor}</th>
-        <th>${contest}</th>
-        <th>${dates}</th>
+        <th class="name">${name}</th>
+        <th class="created">${created}</th>
+        <th class="category">${categor}</th>
+        <th class="content">${contest}</th>
+        <th сlass="data_">${dates}</th>
         <th class="btn">
             <button class="btn_arh" ><img src="https://cdn-icons-png.flaticon.com/512/1732/1732309.png" alt=""></button>
             <button class="btn_del"><img src="https://cdn-icons-png.flaticon.com/512/70/70757.png" alt=""></button>
@@ -173,19 +173,43 @@ function newElementCreate() {
 }
 
 //коли кнопка нажата-видаляти карточку із структури main та додати в arhiv
-//1.Обрати всі кнопки
+//1.Обрати всі кнопки архіву
 
 const buttons_arh = document.querySelectorAll(".btn_arh");
-console.log(buttons_arh);
+// console.log(buttons_arh);
 
-//2.Створити функцію відалення
+//2.Створити функцію архівації
 function handlClick(e) {
   const currentButton = e.currentTarget;
-  elemListArhiv.push(currentButton.closest(".new_table"));
+  //видылити з тега объект
+  const div_elem = currentButton.closest(".new_table");
+  console.log(div_elem);
+  const string_index = div_elem.rowIndex; //индекс выбраной строки
+  console.log(string_index);
+  //////////////////////////////////////
+  const name =
+    document.getElementsByClassName("name")[string_index - 1].innerHTML;
+  console.log(name);
+  const created =
+    document.getElementsByClassName("created")[string_index - 1].innerHTML;
+  console.log(created);
+  const categor =
+    document.getElementsByClassName("category")[string_index - 1].innerHTML;
+  console.log(categor);
+  const content =
+    document.getElementsByClassName("content")[string_index - 1].innerHTML;
+  console.log(content);
+  const data =
+    document.getElementsByClassName("data_")[string_index - 1].innerHTML;
+  console.log(data);
 
-  console.log(elemListArhiv);
+  ///////////////////////////////////////////////////
 
+  //запушити элемент  в нову таблицю
+  // elemListArhiv.push(elemForPush);
+  //видалити едеменнт зі старої таблиці
   currentButton.closest(".new_table").remove();
+  //обновити  таблицю
   const generateElemArhiv = (name, created, categor, contest, dates) => {
     return `
     <tr class="new_table_afhiv">
@@ -194,7 +218,6 @@ function handlClick(e) {
         <th>${categor}</th>
         <th>${contest}</th>
         <th>${dates}</th>
-
      </tr>
     `;
   };
