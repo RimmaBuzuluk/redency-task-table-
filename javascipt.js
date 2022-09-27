@@ -91,8 +91,8 @@ const generateElemArhiv = (name, created, categor, contest, dates) => {
         <th>${categor}</th>
         <th>${contest}</th>
         <th>${dates}</th>
-        <th class="btn">
-            <button class="btn_red"><img src="https://w7.pngwing.com/pngs/672/1022/png-transparent-writing-computer-icons-blog-write-miscellaneous-angle-text.png"></button>
+        <th class="main__img">
+                    <img src="https://cdn-icons-png.flaticon.com/512/13/13964.png" alt="">
         </th>
      </tr>
     `;

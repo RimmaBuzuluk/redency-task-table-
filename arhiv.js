@@ -55,6 +55,9 @@ function handlClickArhiv(e) {
           <th>${categor}</th>
           <th>${contest}</th>
           <th>${dates}</th>
+          <th class="main__img">
+                    <img src="https://cdn-icons-png.flaticon.com/512/13/13964.png" alt="">
+        </th>
        </tr>
       `;
   };
