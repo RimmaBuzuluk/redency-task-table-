@@ -74,13 +74,13 @@ let table = document.getElementById("table_arh");
 table.appendChild(tbody_arh);
 
 const elemListArhiv = [
-  // {
-  //   name: "ssss",
-  //   created: 2015,
-  //   categor: "slss",
-  //   contest: "sslsl",
-  //   dates: "s,sks",
-  // },
+  {
+    name: "ssss",
+    created: 2015,
+    categor: "slss",
+    contest: "sslsl",
+    dates: "s,sks",
+  },
 ];
 
 const generateElemArhiv = (name, created, categor, contest, dates) => {
@@ -91,6 +91,9 @@ const generateElemArhiv = (name, created, categor, contest, dates) => {
         <th>${categor}</th>
         <th>${contest}</th>
         <th>${dates}</th>
+        <th class="btn">
+            <button class="btn_red"><img src="https://w7.pngwing.com/pngs/672/1022/png-transparent-writing-computer-icons-blog-write-miscellaneous-angle-text.png"></button>
+        </th>
      </tr>
     `;
 };

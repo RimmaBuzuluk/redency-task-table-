@@ -10,27 +10,27 @@ function handlClickArhiv(e) {
   const currentButton = e.currentTarget;
   //видылити з тега объект
   const div_elem = currentButton.closest(".new_table");
-  console.log(div_elem);
+  //   console.log(div_elem);
   const string_index = div_elem.rowIndex; //индекс выбраной строки
-  console.log(string_index);
+  //   console.log(string_index);
   //////////////////////////////////////
   const name =
     document.getElementsByClassName("name")[string_index - 1].innerHTML;
-  console.log(name);
+  //   console.log(name);
   const created =
     document.getElementsByClassName("created")[string_index - 1].innerHTML;
-  console.log(created);
+  //   console.log(created);
   const categor =
     document.getElementsByClassName("category")[string_index - 1].innerHTML;
-  console.log(categor);
+  //   console.log(categor);
   const contest =
     document.getElementsByClassName("content")[string_index - 1].innerHTML;
-  console.log(contest);
+  //   console.log(contest);
   // const dates =
   //   document.getElementsByClassName("datam")[string_index - 1].innerHTML;
   // console.log(dates);
 
-  console.log(elemList);
+  //   console.log(elemList);
   ///////////////////////////////////////////////////
   let new_elem = {
     name: name,
@@ -46,7 +46,7 @@ function handlClickArhiv(e) {
   currentButton.closest(".new_table").remove();
   //обновити  таблицю
   elemList.splice(string_index - 1, 1);
-  console.log(elemList);
+  //   console.log(elemList);
   const generateElemArhiv = (name, created, categor, contest, dates) => {
     return `
       <tr class="new_table_afhiv">
@@ -72,7 +72,7 @@ function handlClickArhiv(e) {
     .join("");
   tbody_arh.innerHTML = elemTableArhiv;
 
-  console.log(currentButton.parentElement);
+  //   console.log(currentButton.parentElement);
   number();
 }
 

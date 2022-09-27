@@ -8,7 +8,7 @@ function newElementCreate() {
     dates: "new",
   };
   elemList.push(elemListNew);
-  console.log(elemList);
+  //   console.log(elemList);
 
   const generateElemNew = (name, created, categor, contest, dates) => {
     return `
@@ -39,6 +39,7 @@ function newElementCreate() {
     })
     .join("");
   tbody.innerHTML = elemTable;
+  number();
 
   // let tbody_ar = document.getElementById("id_arh");
 }
