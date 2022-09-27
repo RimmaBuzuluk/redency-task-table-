@@ -35,7 +35,7 @@ tbody.appendChild(tr);
 const generateElem = (name, created, categor, contest, dates) => {
   return `
     <tr class="new_table">
-        <th class="name">${name}</th>
+        <th class="name" contenteditable="true">${name}</th>
         <th class="created">${created}</th>
         <th class="category">${categor}</th>
         <th class="content">${contest}</th>
@@ -91,7 +91,6 @@ const generateElemArhiv = (name, created, categor, contest, dates) => {
         <th>${categor}</th>
         <th>${contest}</th>
         <th>${dates}</th>
-
      </tr>
     `;
 };

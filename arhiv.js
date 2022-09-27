@@ -30,6 +30,7 @@ function handlClickArhiv(e) {
   //   document.getElementsByClassName("datam")[string_index - 1].innerHTML;
   // console.log(dates);
 
+  console.log(elemList);
   ///////////////////////////////////////////////////
   let new_elem = {
     name: name,
@@ -41,18 +42,21 @@ function handlClickArhiv(e) {
   //запушити элемент  в нову таблицю
   elemListArhiv.push(new_elem);
   //видалити едеменнт зі старої таблиці
+
   currentButton.closest(".new_table").remove();
   //обновити  таблицю
+  elemList.splice(string_index - 1, 1);
+  console.log(elemList);
   const generateElemArhiv = (name, created, categor, contest, dates) => {
     return `
-    <tr class="new_table_afhiv">
-        <th>${name}</th>
-        <th>${created}</th>
-        <th>${categor}</th>
-        <th>${contest}</th>
-        <th>${dates}</th>
-     </tr>
-    `;
+      <tr class="new_table_afhiv">
+          <th>${name}</th>
+          <th>${created}</th>
+          <th>${categor}</th>
+          <th>${contest}</th>
+          <th>${dates}</th>
+       </tr>
+      `;
   };
 
   const elemTableArhiv = elemListArhiv
@@ -68,7 +72,8 @@ function handlClickArhiv(e) {
     .join("");
   tbody_arh.innerHTML = elemTableArhiv;
 
-  // console.log(currentButton.parentElement);
+  console.log(currentButton.parentElement);
+  number();
 }
 
 //3.використовувати цикл щоб додати обробник події до кожної кнопки

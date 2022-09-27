@@ -1,17 +1,26 @@
 /////////////////////////////////УДАЛЕНИЕ ЭЛЕМЕНТА ИЗ ГЛАВНОГО МАССИВА
 //коли кнопка нажата-видаляти карточку із структури DOM
-//1.Обрати всі кнопки
+
+//1.Обрати всі кнопки виделення
 
 const buttons_del = document.querySelectorAll(".btn_del");
 
-//2.Створити функцію відалення
-function handlClick(e) {
-  const currentButton = e.currentTarget;
-  currentButton.closest(".new_table").remove();
-  //console.log(currentButton.parentElement);
-  console.log(elemList);
-}
-//3.використовувати цикл щоб додати обробник події до кожної кнопки
 buttons_del.forEach((buttons_del) => {
-  buttons_del.addEventListener("click", handlClick);
+  console.log("listener");
+  buttons_del.addEventListener("click", deleteButt);
 });
+
+function deleteButt(e) {
+  console.log("butt");
+  const currentButtonDel = e.currentTarget;
+  //видылити з тега объект
+  const div_elem = currentButtonDel.closest(".new_table");
+  console.log(div_elem);
+  const string_index = div_elem.rowIndex; //индекс выбраной строки
+  console.log(string_index);
+  elemList.splice(string_index - 1, 1);
+  console.log(elemList);
+  //видалити з екрану
+  currentButtonDel.closest(".new_table").remove();
+  number();
+}
