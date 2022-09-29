@@ -46,38 +46,10 @@ function handlClickArhiv(e) {
   currentButton.closest(".new_table").remove();
   //обновити  таблицю
   elemList.splice(string_index - 1, 1);
-  //   console.log(elemList);
-  const generateElemArhiv = (name, created, categor, contest, dates) => {
-    return `
-      <tr class="new_table_afhiv">
-          <th class="name_back">${name}</th>
-          <th class="created_back">${created}</th>
-          <th class="categor_back">${categor}</th>
-          <th class="contest_back">${contest}</th>
-          <th class="dates_back">${dates}</th>
-          <th class="main__img">
-                    <img src="https://cdn-icons-png.flaticon.com/512/13/13964.png" alt="">
-        </th>
-       </tr>
-      `;
-  };
+  restart_elemListArihiv();
 
-  const elemTableArhiv = elemListArhiv
-    .map((el_a) => {
-      return generateElemArhiv(
-        el_a.name,
-        el_a.created,
-        el_a.categor,
-        el_a.contest,
-        el_a.dates
-      );
-    })
-    .join("");
-  tbody_arh.innerHTML = elemTableArhiv;
-
-  //   console.log(currentButton.parentElement);
   number();
-  back();
+  // back();
 }
 
 //3.використовувати цикл щоб додати обробник події до кожної кнопки

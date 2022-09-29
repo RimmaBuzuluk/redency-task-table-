@@ -32,6 +32,8 @@ let tbody = document.getElementById("tbody");
 tbody.appendChild(tr);
 
 //яка приймає 5 аргументів
+
+// restart_elemListArihiv();
 const generateElem = (name, created, categor, contest, dates) => {
   return `
     <tr class="new_table">
@@ -45,7 +47,7 @@ const generateElem = (name, created, categor, contest, dates) => {
             <button class="btn_del"><img src="https://cdn-icons-png.flaticon.com/512/70/70757.png" alt=""></button>
             <button class="btn_red"><img src="https://w7.pngwing.com/pngs/672/1022/png-transparent-writing-computer-icons-blog-write-miscellaneous-angle-text.png"></button>
         </th>
-     </tr>   
+     </tr>
     `;
 };
 
