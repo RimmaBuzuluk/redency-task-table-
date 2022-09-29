@@ -50,11 +50,11 @@ function handlClickArhiv(e) {
   const generateElemArhiv = (name, created, categor, contest, dates) => {
     return `
       <tr class="new_table_afhiv">
-          <th>${name}</th>
-          <th>${created}</th>
-          <th>${categor}</th>
-          <th>${contest}</th>
-          <th>${dates}</th>
+          <th class="name_back">${name}</th>
+          <th class="created_back">${created}</th>
+          <th class="categor_back">${categor}</th>
+          <th class="contest_back">${contest}</th>
+          <th class="dates_back">${dates}</th>
           <th class="main__img">
                     <img src="https://cdn-icons-png.flaticon.com/512/13/13964.png" alt="">
         </th>
@@ -77,6 +77,7 @@ function handlClickArhiv(e) {
 
   //   console.log(currentButton.parentElement);
   number();
+  back();
 }
 
 //3.використовувати цикл щоб додати обробник події до кожної кнопки
