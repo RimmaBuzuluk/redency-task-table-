@@ -26,4 +26,10 @@ function restart_elemListArihiv() {
     })
     .join("");
   tbody_arh.innerHTML = elemTableArhiv;
+
+  ///////дає можливість фрхівувати елементи навіть після додавання
+  const btnsArhBack = document.querySelectorAll(".main__img");
+  btnsArhBack.forEach((btn) => {
+    btn.addEventListener("click", backInMainTable);
+  });
 }

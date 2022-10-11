@@ -6,7 +6,7 @@ function restart_elemList() {
         <th class="created">${created}</th>
         <th class="category">${categor}</th>
         <th class="content">${contest}</th>
-        <th сlass="datam">${dates}</th>
+        <th class="datam">${dates}</th>
         <th class="btn">
             <button class="btn_arh" ><img src="https://cdn-icons-png.flaticon.com/512/1732/1732309.png" alt=""></button>
             <button class="btn_del"><img src="https://cdn-icons-png.flaticon.com/512/70/70757.png" alt=""></button>

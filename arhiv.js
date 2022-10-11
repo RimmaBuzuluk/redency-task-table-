@@ -22,14 +22,12 @@ function handlClickArhiv(e) {
   //   console.log(created);
   const categor =
     document.getElementsByClassName("category")[string_index - 1].innerHTML;
-  //   console.log(categor);
+  console.log(categor);
   const contest =
     document.getElementsByClassName("content")[string_index - 1].innerHTML;
   //   console.log(contest);
-  // const dates =
-  //   document.getElementsByClassName("datam")[string_index - 1].innerHTML;
-  // console.log(dates);
-
+  // const dates = document.getElementsByClassName("datam");
+  // console.log("dates", dates);
   //   console.log(elemList);
   ///////////////////////////////////////////////////
   let new_elem = {
@@ -37,7 +35,7 @@ function handlClickArhiv(e) {
     created: created,
     categor: categor,
     contest: contest,
-    dates: "ddff",
+    dates: "12.09",
   };
   //запушити элемент  в нову таблицю
   elemListArhiv.push(new_elem);
