@@ -35,5 +35,17 @@ function restart_elemList() {
   buttons_back.forEach((buttons_back) => {
     buttons_back.addEventListener("click", backInMainTable);
   });
+
+  ///////дає можливість видаляти елементи навіть після додавання
+  const btnsDel = document.querySelectorAll(".btn_del");
+  btnsDel.forEach((btn) => {
+    btn.addEventListener("click", deleteButt);
+  });
+
+  ///////дає можливість фрхівувати елементи навіть після додавання
+  const btnsArh = document.querySelectorAll(".btn_arh");
+  btnsArh.forEach((btn) => {
+    btn.addEventListener("click", handlClickArhiv);
+  });
 }
 // restart_elemList()

@@ -2,7 +2,7 @@
 //коли кнопка нажата-видаляти карточку із arhiv і додавати до основного
 //1.Обрати всі кнопки архіву
 const buttons_back = document.querySelectorAll(".back_img");
-console.log(buttons_back);
+// console.log(buttons_back);
 
 //2.Створити функцію архівації
 function backInMainTable(e) {
@@ -14,7 +14,7 @@ function backInMainTable(e) {
   const string_index = div_elem_back.rowIndex; //индекс выбраной строки
   //   console.log(string_index);
   ///створити новый елемет
-  //////////////////////////////////////
+
   const name_back =
     document.getElementsByClassName("name_back")[string_index - 1].innerHTML;
   //   console.log(name_back);
@@ -31,7 +31,6 @@ function backInMainTable(e) {
     document.getElementsByClassName("dates_back")[string_index - 1].innerHTML;
   //   console.log(dates_back);
 
-  /////////////////////////////////////////////////
   let new_elem_back = {
     name: name_back,
     created: created_back,
@@ -54,7 +53,6 @@ function backInMainTable(e) {
   console.log(elemListArhiv);
 
   restart_elemList();
-
   number();
 }
 
