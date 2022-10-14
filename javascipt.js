@@ -1,24 +1,24 @@
 const elemList = [
   {
-    name: "Hello",
+    name: "name_1",
     created: 2015,
-    categor: "червоний ",
+    categor: "pink",
     contest: "Task",
-    dates: "ddff",
+    dates: "18.10.2022",
   },
   {
-    name: "lddkdd",
+    name: "Name",
     created: 2065,
-    categor: "dldldpd ",
-    contest: "ghgj",
-    dates: "ddff",
+    categor: "blue",
+    contest: "Wark",
+    dates: "05.10.2021",
   },
   {
-    name: "Booo",
+    name: "Hello",
     created: 2654,
-    categor: "dldkdj",
+    categor: "blue",
     contest: "Task",
-    dates: "llll",
+    dates: "03.03.2022",
   },
 ];
 
@@ -36,8 +36,8 @@ tbody.appendChild(tr);
 // restart_elemListArihiv();
 const generateElem = (name, created, categor, contest, dates) => {
   return `
-    <tr class="new_table">
-        <th class="name" contenteditable="true">${name}</th>
+    <tr class="new_table" style="color:black;">
+        <th class="name" >${name}</th>
         <th class="created">${created}</th>
         <th class="category">${categor}</th>
         <th class="content">${contest}</th>
@@ -77,11 +77,11 @@ table.appendChild(tbody_arh);
 
 const elemListArhiv = [
   {
-    name: "ssss",
+    name: "Arhive name",
     created: 2015,
-    categor: "slss",
-    contest: "sslsl",
-    dates: "s,sks",
+    categor: "rad",
+    contest: "Task",
+    dates: "08.07.2020",
   },
 ];
 
@@ -112,3 +112,33 @@ const elemTableArhiv = elemListArhiv
   })
   .join("");
 tbody_arh.innerHTML = elemTableArhiv;
+
+/////////////////////////////////////////
+/////
+
+const buttons_change = document.querySelectorAll(".btn_red");
+console.log(buttons_change);
+
+buttons_change.forEach((buttons_change) => {
+  buttons_change.addEventListener("click", changeButt);
+});
+
+function changeButt(e) {
+  const currentButtonChange = e.currentTarget;
+  //видылити з тега объект
+  const change_elem = currentButtonChange.closest(".new_table");
+  console.log(change_elem);
+
+  let colorStyle = change_elem.style.color;
+  console.log(colorStyle);
+
+  if (colorStyle == "black") {
+    change_elem.style.color = " ";
+    change_elem.style.color = "red";
+  } else {
+    change_elem.style.color = " ";
+    change_elem.style.color = "black";
+  }
+
+  number();
+}
