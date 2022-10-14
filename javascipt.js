@@ -60,10 +60,8 @@ tbody.innerHTML = elemTable;
 
 let tbody_ar = document.getElementById("id_arh");
 
-// /////////////////
-///////////////////////
-///////////////////////
-///////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
 /////////////////////////// СОЗДАНИЕ АРХТВА
 
 ///////create element in table///////
@@ -134,10 +132,16 @@ function changeButt(e) {
 
   if (colorStyle == "black") {
     change_elem.style.color = " ";
-    change_elem.style.color = "red";
+    change_elem.style.color = "gray";
+    change_elem.setAttribute("contenteditable", true);
+    change_elem.style.border = "2px solid black";
+    change_elem.style.background = "#F8F8F8";
   } else {
+    change_elem.removeAttribute("contenteditable");
     change_elem.style.color = " ";
     change_elem.style.color = "black";
+    change_elem.style.border = "none";
+    change_elem.style.background = "none";
   }
 
   number();
