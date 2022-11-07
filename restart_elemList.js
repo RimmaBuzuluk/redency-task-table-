@@ -1,8 +1,8 @@
 function restart_elemList() {
   const generateElem = (name, created, categor, contest, dates) => {
     return `
-    <tr class="new_table">
-        <th class="name" contenteditable="true">${name}</th>
+    <tr class="new_table" style="color:black;">
+        <th class="name" >${name}</th>
         <th class="created">${created}</th>
         <th class="category">${categor}</th>
         <th class="content">${contest}</th>
@@ -46,6 +46,11 @@ function restart_elemList() {
   const btnsArh = document.querySelectorAll(".btn_arh");
   btnsArh.forEach((btn) => {
     btn.addEventListener("click", handlClickArhiv);
+  });
+
+  const btnsChange = document.querySelectorAll(".btn_red");
+  btnsChange.forEach((btn) => {
+    btn.addEventListener("click", changeButt);
   });
 }
 // restart_elemList()

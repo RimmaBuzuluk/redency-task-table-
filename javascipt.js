@@ -22,6 +22,8 @@ const elemList = [
   },
 ];
 
+console.log(elemList[0].name);
+
 ///////create element in table///////
 const tr = document.createElement("tr");
 //Додати до нього класс wrapper;
@@ -85,7 +87,7 @@ const elemListArhiv = [
 
 const generateElemArhiv = (name, created, categor, contest, dates) => {
   return `
-    <tr class="new_table_afhiv">
+    <tr class="new_table_afhiv" style="color:black;">
         <th class="name_back">${name}</th>
         <th class="created_back">${created}</th>
         <th class="categor_back">${categor}</th>
@@ -125,10 +127,13 @@ function changeButt(e) {
   const currentButtonChange = e.currentTarget;
   //видылити з тега объект
   const change_elem = currentButtonChange.closest(".new_table");
-  console.log(change_elem);
+  // console.log(change_elem);
+
+  const string_index = change_elem.rowIndex; //индекс выбраной строки
+  // console.log("index", string_index);
 
   let colorStyle = change_elem.style.color;
-  console.log(colorStyle);
+  // console.log(colorStyle);
 
   if (colorStyle == "black") {
     change_elem.style.color = " ";
@@ -143,6 +148,5 @@ function changeButt(e) {
     change_elem.style.border = "none";
     change_elem.style.background = "none";
   }
-
-  number();
+  restart_newName(string_index);
 }
