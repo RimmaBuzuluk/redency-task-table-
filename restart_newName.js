@@ -16,13 +16,17 @@ function restart_newName(string_index) {
     document.getElementsByClassName("category")[string_index - 1].innerHTML;
   elemList[string_index - 1].contest =
     document.getElementsByClassName("content")[string_index - 1].innerHTML;
-  //   elemList[string_index - 1].dates =
-  //     document.getElementsByClassName("datam")[string_index - 1].innerHTML;
+  elemList[string_index - 1].dates =
+    document.getElementsByClassName("data")[string_index - 1].innerHTML;
 
   console.log(
     "название новое ",
     document.getElementsByClassName("name")[string_index - 1].innerHTML
   );
-  number();
+
   console.log("старое название", elemList[string_index - 1].name);
+
+  number();
 }
+
+number();

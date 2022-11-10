@@ -38,7 +38,6 @@ function number() {
   ///////////////////вказати кількість архівованих  тасків зі значенням "Task"
   const archiveTask = document.getElementById("archive_task");
   archiveTask.innerHTML = task_archived();
-
   ///////////////////вказати кількість архівованих  тасків зі значенням "Task"
   const random_archiveTask = document.getElementById("random_task_archive");
   random_archiveTask.innerHTML = n_archive - archiveTask.innerHTML;

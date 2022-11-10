@@ -27,16 +27,16 @@ function backInMainTable(e) {
   const contest_back =
     document.getElementsByClassName("contest_back")[string_index - 1].innerHTML;
   //   console.log(contest_back);
-  const dates_back =
-    document.getElementsByClassName("dates_back")[string_index - 1].innerHTML;
-  //   console.log(dates_back);
+  const data_back =
+    document.getElementsByClassName("data_back")[string_index - 1].innerHTML;
+  //   console.log(data_back);
 
   let new_elem_back = {
     name: name_back,
     created: created_back,
     categor: categor_back,
     contest: contest_back,
-    dates: dates_back,
+    data: data_back,
   };
 
   //   console.log(new_elem_back);

@@ -26,8 +26,9 @@ function handlClickArhiv(e) {
   const contest =
     document.getElementsByClassName("content")[string_index - 1].innerHTML;
   //   console.log(contest);
-  // const dates = document.getElementsByClassName("datam");
-  // console.log("dates", dates);
+  const data =
+    document.getElementsByClassName("data")[string_index - 1].innerHTML;
+  console.log("data", data);
   //   console.log(elemList);
   ///////////////////////////////////////////////////
   let new_elem = {
@@ -35,7 +36,7 @@ function handlClickArhiv(e) {
     created: created,
     categor: categor,
     contest: contest,
-    dates: "12.09",
+    data: data,
   };
   //запушити элемент  в нову таблицю
   elemListArhiv.push(new_elem);

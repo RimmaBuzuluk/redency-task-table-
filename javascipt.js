@@ -43,7 +43,7 @@ const generateElem = (name, created, categor, contest, dates) => {
         <th class="created">${created}</th>
         <th class="category">${categor}</th>
         <th class="content">${contest}</th>
-        <th сlass="datam">${dates}</th>
+        <th class="data">${dates}</th>
         <th class="btn">
             <button class="btn_arh" ><img src="https://cdn-icons-png.flaticon.com/512/1732/1732309.png" alt=""></button>
             <button class="btn_del"><img src="https://cdn-icons-png.flaticon.com/512/70/70757.png" alt=""></button>
@@ -75,15 +75,7 @@ tbody_arh.classList.add("tbody_arhive");
 let table = document.getElementById("table_arh");
 table.appendChild(tbody_arh);
 
-const elemListArhiv = [
-  {
-    name: "Arhive name",
-    created: 2015,
-    categor: "rad",
-    contest: "Task",
-    dates: "08.07.2020",
-  },
-];
+const elemListArhiv = [];
 
 const generateElemArhiv = (name, created, categor, contest, dates) => {
   return `

@@ -5,7 +5,7 @@ function newElementCreate() {
     created: "nwe",
     categor: "new",
     contest: "nwe",
-    dates: "new",
+    data: "new",
   };
   elemList.push(elemListNew);
   //   console.log(elemList);
